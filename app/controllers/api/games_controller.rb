@@ -26,6 +26,9 @@ class Api::GamesController < ApplicationController
     @number = params[:number]
     render 'string_guess.json.jb'
   end
-
+  def url_segment_params_action
+    @message = params[:wildcard]
+    render 'url_segment_params_view.json.jb'
+  end
 
 end
